@@ -13,9 +13,9 @@ const POST_MUTATION = gql`
   }
 `
 
-const CreateLink = () => {
+const CreateLink = ({ history }) => {
   return (
-    <Mutation mutation={POST_MUTATION}>
+    <Mutation mutation={POST_MUTATION} onCompleted={() => history.push('/')}>
       {(postMutation) => (
         <form
           onSubmit={e => {
