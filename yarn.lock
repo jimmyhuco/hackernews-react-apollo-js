@@ -1206,6 +1206,13 @@ apollo-client@^2.4.2:
   optionalDependencies:
     "@types/async" "2.0.49"
 
+apollo-link-context@^1.0.9:
+  version "1.0.9"
+  resolved "http://registry.npm.taobao.org/apollo-link-context/download/apollo-link-context-1.0.9.tgz#7fbc034de44546e957a840be76b2f6277c785e8f"
+  integrity sha1-f7wDTeRFRulXqEC+drL2J3x4Xo8=
+  dependencies:
+    apollo-link "^1.2.3"
+
 apollo-link-dedup@^1.0.0:
   version "1.0.10"
   resolved "http://registry.npm.taobao.org/apollo-link-dedup/download/apollo-link-dedup-1.0.10.tgz#7b94589fe7f969777efd18a129043c78430800ae"
@@ -4586,6 +4593,11 @@ icss-utils@^2.1.0:
   dependencies:
     postcss "^6.0.1"
 
+idb-keyval@3.1.0:
+  version "3.1.0"
+  resolved "http://registry.npm.taobao.org/idb-keyval/download/idb-keyval-3.1.0.tgz#cce9ed320734446784d52ed398c4b075a4273f51"
+  integrity sha1-zOntMgc0RGeE1S7TmMSwdaQnP1E=
+
 identity-obj-proxy@3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/identity-obj-proxy/download/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
@@ -6251,6 +6263,13 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+money-clip@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/money-clip/download/money-clip-3.0.0.tgz#6607831506834e43f1adbf5c9f495303f8fe52c7"
+  integrity sha1-ZgeDFQaDTkPxrb9cn0lTA/j+Usc=
+  dependencies:
+    idb-keyval "3.1.0"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
