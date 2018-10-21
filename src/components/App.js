@@ -1,21 +1,18 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { connect } from 'redux-bundler-react'
+import navHelper from 'internal-nav-helper'
 import Header from './Header'
-import LinkList from './LinkList'
-import CreateLink from './CreateLink'
 
-const App = () => {
+const App = ({ doUpdateUrl, route }) => {
+  const Content = route
   return (
-    <div className='center w85'>
+    <div className='center w85' onClick={navHelper(doUpdateUrl)}>
       <Header />
       <div className='ph3 pv1 background-gray'>
-        <Switch>
-          <Route exact path='/' component={LinkList} />
-          <Route exact path='/create' component={CreateLink} />
-        </Switch>
+        <Content />
       </div>
     </div>
   )
 }
 
-export default App
+export default connect('selectRoute', 'doUpdateUrl', App)
