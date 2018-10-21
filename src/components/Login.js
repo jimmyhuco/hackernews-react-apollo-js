@@ -20,12 +20,11 @@ const LOGIN_MUTATION = gql`
   }
 `
 
-const Login = ({ loginForm, doUpdateLoginForm, doToggleLogin, doUpdateUrl }) => {
+const Login = ({ loginForm, doUpdateLoginForm, doToggleLogin }) => {
   const { login, email, password, name } = loginForm
 
   const loginAndRedirectToRoot = (data) => {
     doUpdateLoginForm(LOGINFORM.AUTHENTICATION, data)
-    doUpdateUrl('/')
   }
 
   return (
@@ -78,4 +77,4 @@ const Login = ({ loginForm, doUpdateLoginForm, doToggleLogin, doUpdateUrl }) => 
   )
 }
 
-export default connect('selectLoginForm', 'doUpdateLoginForm', 'doToggleLogin', 'doUpdateUrl', Login)
+export default connect('selectLoginForm', 'doUpdateLoginForm', 'doToggleLogin', Login)

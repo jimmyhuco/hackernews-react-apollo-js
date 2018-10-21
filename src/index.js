@@ -18,9 +18,12 @@ const httpLink = createHttpLink({
 })
 
 const authLink = setContext(async (_, { headers }) => {
-  const token = await cache.get('loginForm').then(({ authToken }) => {
-    return authToken
+  // first time loginForm is null
+  const loginForm = await cache.getAll().then(({ loginForm }) => {
+    return loginForm
   })
+
+  const token = loginForm ? loginForm.authToken : ''
 
   return {
     headers: {

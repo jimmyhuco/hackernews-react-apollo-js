@@ -2,10 +2,9 @@ import React from 'react'
 import { connect } from 'redux-bundler-react'
 import { LOGINFORM } from '../bundles/actiontypes'
 
-const Header = ({ authToken, doUpdateLoginForm, doUpdateUrl }) => {
+const Header = ({ authToken, doUpdateLoginForm }) => {
   const logoutAndRedirectToRoot = () => {
     doUpdateLoginForm(LOGINFORM.LOGOUT)
-    doUpdateUrl('/')
   }
 
   return (
@@ -42,4 +41,4 @@ const Header = ({ authToken, doUpdateLoginForm, doUpdateUrl }) => {
   )
 }
 
-export default connect('selectAuthToken', 'doUpdateLoginForm', 'doUpdateUrl', Header)
+export default connect('selectAuthToken', 'doUpdateLoginForm', Header)
